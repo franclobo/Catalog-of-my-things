@@ -24,6 +24,7 @@ class item
     @publish_date.parse > @publish_date.parse.prev_year(10)
   end
 
-  def move_to_archive   
+  def move_to_archive
+    @archived = true if can_be_archive?
   end
 end
