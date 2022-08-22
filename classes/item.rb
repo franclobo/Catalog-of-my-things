@@ -1,8 +1,9 @@
-class item
+# rubocop: disable Style/TrivialAccessors
+class Item
   attr_accessor :publish_date
-  attr_reader :id, :genre, :author, :label, :archived
+  attr_reader :id, :archived
 
-  def initialize (id, publish_date, archived: false)
+  def initialize(publish_date, archived: false)
     @id = Random.rand(1..1000)
     @publish_date = publish_date
     @archived = archived
@@ -28,3 +29,4 @@ class item
     @archived = true if can_be_archive?
   end
 end
+# rubocop: enable Style/TrivialAccessors
