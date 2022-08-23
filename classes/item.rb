@@ -26,7 +26,7 @@ class Item
   end
 
   private
-  
+
   def can_be_archive?
     @publish_date.parse > @publish_date.parse.prev_year(10)
   end
