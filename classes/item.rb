@@ -1,4 +1,3 @@
-# rubocop: disable Style/TrivialAccessors
 class Item
   attr_accessor :publish_date
   attr_reader :id, :archived
@@ -9,17 +8,7 @@ class Item
     @archived = archived
   end
 
-  def genre=(genre)
-    @genre = genre
-  end
-
-  def author=(author)
-    @author = author
-  end
-
-  def label=(label)
-    @label = label
-  end
+  attr_writer :genre, :author, :label
 
   def can_be_archive?
     @publish_date.parse > @publish_date.parse.prev_year(10)
@@ -29,4 +18,3 @@ class Item
     @archived = true if can_be_archive?
   end
 end
-# rubocop: enable Style/TrivialAccessors

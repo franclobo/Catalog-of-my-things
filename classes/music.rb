@@ -5,5 +5,4 @@ class Mussic < Item
     super(publish_date, archived, id)
     @on_spotify = on_spotify
   end
-
 end

@@ -6,5 +6,4 @@ class Genre
     @name = name
     @items = []
   end
-
 end
