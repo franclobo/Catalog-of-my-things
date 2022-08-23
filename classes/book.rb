@@ -14,7 +14,7 @@ class Book < Item
     @cover_state = cover_state
   end
 
-  # rubocop:enable Metrics/ParameterList
+  # rubocop:enable Metrics/ParameterLists
   def to_json(*args)
     {
       JSON.create_id => self.class.name,
