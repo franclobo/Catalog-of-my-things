@@ -21,12 +21,14 @@ class Item
     @label = label
   end
 
-  def can_be_archive?
-    @publish_date.parse > @publish_date.parse.prev_year(10)
-  end
-
   def move_to_archive
     @archived = true if can_be_archive?
+  end
+
+  private
+
+  def can_be_archive?
+    @publish_date.parse > @publish_date.parse.prev_year(10)
   end
 end
 # rubocop: enable Style/TrivialAccessors
