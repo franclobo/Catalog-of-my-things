@@ -1,4 +1,3 @@
-# rubocop: disable Style/TrivialAccessors
 class Item
   attr_accessor :publish_date
   attr_reader :id, :archived
@@ -16,6 +15,7 @@ class Item
 
   def author=(author)
     @author = author
+    author.items.push(self) unless author.items.include?(self)
   end
 
   def label=(label)
@@ -33,4 +33,3 @@ class Item
     @publish_date.parse > @publish_date.parse.prev_year(10)
   end
 end
-# rubocop: enable Style/TrivialAccessors
