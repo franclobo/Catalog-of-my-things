@@ -8,7 +8,12 @@ class Item
     @archived = archived
   end
 
-  attr_writer :genre, :author, :label
+  attr_writer :author, :label
+
+  def genre=(genre)
+    @genre = genre
+    genre.items.push(self) unless genre.items.include?(self)
+  end
 
   def can_be_archive?
     @publish_date.parse > @publish_date.parse.prev_year(10)
