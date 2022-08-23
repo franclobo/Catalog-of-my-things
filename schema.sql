@@ -49,3 +49,34 @@ ALTER TABLE IF EXISTS public."MusicAlbum"
 
 COMMENT ON TABLE public."MusicAlbum"
     IS 'Create table MusicAlbum';
+
+CREATE TABLE public."Game"
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    multiplayer text NOT NULL,
+    last_played_at date NOT NULL,
+    PRIMARY KEY (id)
+);
+
+ALTER TABLE IF EXISTS public."Game"
+    OWNER to postgres;
+
+COMMENT ON TABLE public."Game"
+    IS 'Create table Game';
+
+CREATE TABLE public."Author"
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    first_name text NOT NULL,
+    last_name text NOT NULL,
+    items integer NOT NULL,
+    PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Author"
+    OWNER to postgres;
+
+COMMENT ON TABLE public."Author"
+    IS 'Create table Author';
