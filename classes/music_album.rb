@@ -5,4 +5,8 @@ class MussicAlbum < Item
     super(publish_date, archived, id)
     @on_spotify = on_spotify
   end
+
+  def can_be_archive?
+    super && @on_spotify ? true : false
+  end
 end

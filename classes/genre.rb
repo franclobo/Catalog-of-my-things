@@ -1,3 +1,5 @@
+require './item'
+
 class Genre
   attr_accessor :name, :items
 
@@ -6,4 +8,11 @@ class Genre
     @name = name
     @items = []
   end
+
+  def add_item(item)
+    @items << item
+    item.genre = self unless item.genre == self
+  end
+
+  private :id, :items
 end
