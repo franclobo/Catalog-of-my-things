@@ -1,14 +1,29 @@
-require_relative '../author'
+require_relative '../classes/author'
 
 describe Author do
-  it 'should be initialized with first_name and last_name' do
-    author = Author.new('John', 'Doe')
-    expect(author.first_name).to eq 'John'
-    expect(author.last_name).to eq 'Doe'
+  context 'when initialized' do
+    it 'should have an id' do
+      author = Author.new('John', 'Doe')
+      expect(author.id).to be_a Integer
+    end
+    it 'should have a first name' do
+      author = Author.new('John', 'Doe')
+      expect(author.first_name).to eq 'John'
+    end
+    it 'should have a last name' do
+      author = Author.new('John', 'Doe')
+      expect(author.last_name).to eq 'Doe'
+    end
   end
 
-  it 'should have an add_item method' do
-    author = Author.new('John', 'Doe')
-    expect(author).to respond_to(:add_item)
+  context 'when adding items' do
+    it 'should add an item' do
+      author = Author.new('John', 'Doe')
+      item = double('Item')
+      allow(item).to receive(:author)
+      expect(item).to receive(:author).with(author)
+      author.add_item(item)
+      expect(author.items).to eq [item]
+    end
   end
 end
