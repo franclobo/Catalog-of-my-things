@@ -30,6 +30,6 @@ class Game < Item
   private
 
   def can_be_archive?
-    super || @last_played_at.parse > Time.now.prev_year(2).strftime('%F')
+    super || Time.new.year - last_played_at > 2
   end
 end
