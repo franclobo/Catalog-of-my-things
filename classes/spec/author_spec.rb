@@ -1,4 +1,4 @@
-require_relative '../classes/author'
+require_relative '../author'
 
 describe Author do
   context 'when initialized' do
