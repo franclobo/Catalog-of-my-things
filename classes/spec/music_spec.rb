@@ -1,13 +1,13 @@
 require_relative '../music_album'
 
-describe MusicAlbum do
-  context 'When create a music album' do
+describe MussicAlbum do
+  context 'When testing the music album class' do
     before(:all) do
-      @music_album = MusicAlbum.new('Yes', 2019, 2010)
+      @album = MussicAlbum.new(true, 2000, true)
     end
 
-    it 'can be archived? if on spotify' do
-      expect(@music_album.scan_be_archive?).to be true
+    it 'can be archive' do
+      expect(@album.can_be_archive?).to be true
     end
   end
 end
