@@ -6,10 +6,8 @@ class Book < Item
   attr_accessor :publisher, :cover_state
 
   # rubocop:disable Metrics/ParameterLists
-  def initialize(
-    publisher, cover_state, publish_date, label = nil, author = nil, genre = nil
-  )
-    super(label, publish_date, author, genre)
+  def initialize(publisher, cover_state, publish_date, label = nil, author = nil, genre = nil)
+    super(publish_date, label, author, genre)
     @publisher = publisher
     @cover_state = cover_state
   end
