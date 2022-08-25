@@ -1,0 +1,24 @@
+[
+  {
+    "json_class": "MussicAlbum",
+    "id": 276,
+    "genre": {
+      "json_class": "Genre",
+      "id": 99,
+      "name": "Rock"
+    },
+    "on_spotify": "Y",
+    "publish_date": "2006",
+    "label": {
+      "json_class": "Label",
+      "id": 62,
+      "title": "Mago de Oz",
+      "color": "Black"
+    },
+    "author": {
+      "json_class": "Author",
+      "first_name": "Finisterra",
+      "last_name": null
+    }
+  }
+]

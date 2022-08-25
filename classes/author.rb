@@ -10,22 +10,22 @@ class Author
   end
 
   def add_item(item)
-    items << item unless items.include?(item)
-    item.author(self)
+    items << item unless items.include? item
+    item.author = self
   end
 
   def to_json(*args)
     {
       JSON.create_id => self.class.name,
-      'a' => [id, first_name, last_name, items]
+      'first_name' => first_name,
+      'last_name' => last_name
     }.to_json(*args)
   end
 
   def self.json_create(object)
-    id, first_name, last_name, items = object['a']
-    author = new(first_name, last_name)
-    author.id = id
-    author.items = items
-    author
+    new(
+      object['first_name'],
+      object['last_name']
+    )
   end
 end

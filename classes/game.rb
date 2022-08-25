@@ -3,28 +3,38 @@ require_relative './item'
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
 
-  def initialize(multiplayer, last_played_at, publish_date)
-    super(publish_date)
+  # rubocop:disable Metrics/ParameterLists
+  def initialize(multiplayer, last_played_at, publish_date, label = nil, author = nil, genre = nil)
+    super(publish_date, label, author, genre)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
   end
 
+  # rubocop:enable Metrics/ParameterLists
   def to_json(*args)
     {
       JSON.create_id => self.class.name,
-      'a' => [id, publish_date, last_played_at, multiplayer, archived, genre&.id, label&.id, author&.id]
+      'id' => @id,
+      'publish_date' => @publish_date,
+      'last_played' => @last_played_at,
+      'multiplayer' => @multiplayer,
+      'genre' => @genre,
+      'title' => @label.title,
+      'author' => @author
     }.to_json(*args)
   end
 
   def self.json_create(object)
-    id, publish_date, last_played_at, multiplayer, archived, genre_id, label_id, author_id = object['a']
-    game = new(publish_date, last_played_at, multiplayer: multiplayer)
-    game.id = id
-    game.archived = archived
-    game.genre = genre_id
-    game.label = label_id
-    game.author = author_id
-    game
+    new(
+      object['id'],
+      object['publish_date'],
+      object['last_played'],
+      object['multiplayer'],
+      object['archived'],
+      object['genre'],
+      Label.new(object['title']),
+      object['author']
+    )
   end
 
   private

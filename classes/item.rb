@@ -1,5 +1,5 @@
 class Item
-  attr_accessor :publish_date, :label
+  attr_accessor :publish_date, :label, :genre, :author
   attr_reader :id, :archived
 
   def initialize(publish_date, label = nil, author = nil, genre = nil, archived: true)
@@ -9,16 +9,6 @@ class Item
     @author = author
     @genre = genre
     @archived = archived
-  end
-
-  def genre=(genre)
-    @genre = genre
-    genre.items.push(self) unless genre.items.include?(self)
-  end
-
-  def author=(author)
-    @author = author
-    author.items.push(self) unless author.items.include?(self)
   end
 
   def move_to_archive

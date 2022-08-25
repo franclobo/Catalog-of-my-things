@@ -5,6 +5,7 @@ describe Label do
   context 'When testing the label class' do
     before(:all) do
       @label = Label.new('Label', 'White')
+      @item = Book.new('Publisher', 'bad', 2020)
     end
 
     it 'The label class constructor' do
@@ -14,10 +15,9 @@ describe Label do
     end
 
     it 'Check if can add_items' do
-      item = Book.new('Publisher', 'bad', 2020)
-      @label.add_item(item)
+      @label.add_item(@item)
       expect(@label.items.length).to eq 1
-      expect(item.label).to eq @label
+      expect(@item.label).to eq @label
     end
   end
 end

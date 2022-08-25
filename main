@@ -1,47 +1,105 @@
+require_relative './classes/app'
+
 # Selection interface
 class Main
+  attr_reader :app
+
+  def initialize
+    @app = App.new
+  end
+
   # Selection
   def options
+    puts 'Please choose an option:'
+    puts '1 - List all'
+    puts '2 - Add Item'
+    puts '0 - Save and Exit'
+    user_selection
+  end
+  
+  def user_selection
+    selection = gets.chomp
+    case selection
+    when '1'
+      options_list
+    when '2'
+      options_add
+    when '0'
+      abort
+    else
+      puts 'Invalid selection'
+      options
+    end
+  end
+
+  def options_list
     puts 'Please choose an option:'
     puts '1 - List all books'
     puts '2 - List all music albums'
     puts '3 - List of games'
-    puts '4 - List all genres'
-    puts '5 - List all labels'
+    puts '4 - List all labels'
+    puts '5 - List all genres'
     puts '6 - List all authors'
-    puts '7 - Add a book'
-    puts '8 - Add a music album'
-    puts '9 - Add a game'
-    puts '0 - Exit'
-    user_selection
+    puts '0 - Save and Exit'
+    list_select
   end
-end
+  
+  def list_select
+    selection = gets.chomp
+    case selection
+    when '1'
+      app.list_books
+      options_list
+    when '2'
+      app.list_music_albums
+      options_list
+    when '3'
+      app.list_games
+      options_list
+    when '4'
+      app.list_labels
+      options_list
+    when '5'
+      app.list_genres
+      options_list
+    when '6'
+      app.list_authors
+      options_list
+    when '0'
+      abort
+    else
+      puts 'Invalid selection'
+      options_list
+    end
+  end
 
-def user_selection
-  selection = gets.chomp
-  case selection
-  when '1'
-    options
-  when '2'
-    options
-  when '3'
-    options
-  when '4'
-    options
-  when '5'
-    options
-  when '6'
-    options
-  when '7'
-    options
-  when '8'
-    options
-  when '9'
-    options
-  when '0'
-    abort
-  else
-    puts 'Invalid selection'
+  def options_add
+    puts 'Please choose an option:'
+    puts '1 - Add a book'
+    puts '2 - Add a music album'
+    puts '3 - Add a game'
+    puts '0 - Save and Exit'
+    add_select
+  end
+
+  def add_select
+    selection = gets.chomp
+    case selection
+    when '1'
+      app.create_book
+      options_add
+    when '2'
+      app.create_music_album
+      options_add
+    when '3'
+      app.create_game
+      options_add
+    when '0'
+      abort
+    else
+      puts 'Invalid selection'
+      options_add
+    end
   end
 end
 

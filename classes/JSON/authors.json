@@ -1,0 +1,37 @@
+[
+  {
+    "json_class": "Author",
+    "first_name": "Texaco",
+    "last_name": "Tumoko"
+  },
+  {
+    "json_class": "Author",
+    "first_name": "JRR",
+    "last_name": "Tolkien"
+  },
+  {
+    "json_class": "Author",
+    "first_name": "Finisterra",
+    "last_name": null
+  },
+  {
+    "json_class": "Author",
+    "first_name": "Sun",
+    "last_name": "Tzu"
+  },
+  {
+    "json_class": "Author",
+    "first_name": "JK",
+    "last_name": "Rowling"
+  },
+  {
+    "json_class": "Author",
+    "first_name": "C.S.",
+    "last_name": "Lewis"
+  },
+  {
+    "json_class": "Author",
+    "first_name": "Riot",
+    "last_name": "Games"
+  }
+]
