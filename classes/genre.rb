@@ -17,13 +17,16 @@ class Genre
 
   def to_json(*args)
     {
-      JSON.create_id => self.class.name, 'props' => [@id, @name]
+      JSON.create_id => self.class.name,
+      'id' => @id,
+      'name' => @name
     }.to_json(*args)
   end
 
   def self.json_create(object)
-    genre = new(name: object['props'][1])
-    genre.id = object['props'][0]
-    genre
+    new(
+      object['id'],
+      object['name']
+    )
   end
 end
