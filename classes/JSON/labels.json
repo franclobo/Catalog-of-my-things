@@ -40,5 +40,11 @@
     "id": 74,
     "title": "Valorant",
     "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 13,
+    "title": "Mario Bros",
+    "color": "Black"
   }
 ]

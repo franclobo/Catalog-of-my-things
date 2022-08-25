@@ -34,5 +34,23 @@
       "first_name": "Riot",
       "last_name": "Games"
     }
+  },
+  {
+    "json_class": "Game",
+    "id": 271,
+    "publish_date": "1990",
+    "last_played": "2022",
+    "multiplayer": "Y",
+    "genre": {
+      "json_class": "Genre",
+      "id": 65,
+      "name": "Arcade"
+    },
+    "title": "Mario Bros",
+    "author": {
+      "json_class": "Author",
+      "first_name": "Nintendo",
+      "last_name": null
+    }
   }
 ]

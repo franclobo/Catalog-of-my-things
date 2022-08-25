@@ -33,5 +33,10 @@
     "json_class": "Author",
     "first_name": "Riot",
     "last_name": "Games"
+  },
+  {
+    "json_class": "Author",
+    "first_name": "Nintendo",
+    "last_name": null
   }
 ]

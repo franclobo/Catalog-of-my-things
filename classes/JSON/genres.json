@@ -33,5 +33,10 @@
     "json_class": "Genre",
     "id": 3,
     "name": "Shooter"
+  },
+  {
+    "json_class": "Genre",
+    "id": 65,
+    "name": "Arcade"
   }
 ]
