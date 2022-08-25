@@ -10,47 +10,47 @@ class App
   attr_accessor :books, :music_albums, :games, :labels, :genres, :authors
 
   def initialize
-    @books = []
-    @music_albums = []
-    @games = []
-    @labels = []
-    @genres = []
-    @authors = []
+    @books = File.exist?('./classes/JSON/books.json') ? JSON.parse(File.read('./classes/JSON/books.json')) : []
+    @music_albums = File.exist?('./classes/JSON/music_albums.json') ? JSON.parse(File.read('./classes/JSON/music_albums.json')) : []
+    @games = File.exist?('./classes/JSON/games.json') ? JSON.parse(File.read('./classes/JSON/games.json')) : []
+    @labels = File.exist?('./classes/JSON/labels.json') ? JSON.parse(File.read('./classes/JSON/labels.json')) : []
+    @genres = File.exist?('./classes/JSON/genres.json') ? JSON.parse(File.read('./classes/JSON/genres.json')) : []
+    @authors = File.exist?('./classes/JSON/authors.json') ? JSON.parse(File.read('./classes/JSON/authors.json')) : []
   end
 
   def list_books
     @books.each do |book|
-      puts "Book Title: #{book.label.title}"
+      puts "Book Title: #{book["title"]}"
     end
   end
 
   def list_labels
     @labels.each do |label|
-      puts "[Label]: #{label.title} (#{label.color})"
+      puts "[Label]: #{label["title"]} (#{label["color"]})"
     end
   end
 
   def list_music_albums
     @music_albums.each do |album|
-      puts "Album Name: #{album.label.title}"
+      puts "Album Name: #{album["label"]["title"]}"
     end
   end
 
   def list_authors
     @authors.each do |author|
-      puts "[Author]: #{author.first_name} #{author.last_name}"
+      puts "[Author]: #{author["first_name"]} #{author["last_name"]}"
     end
   end
 
   def list_games
     @games.each do |game|
-      puts "Game name: #{game.label.title} Genre: #{game.genre.name}"
+      puts "Game name: #{game["title"]} Genre: #{game["genre"]["name"]}"
     end
   end
 
   def list_genres
     @genres.each do |genre|
-      puts "[Genre]: #{genre.name}"
+      puts "[Genre]: #{genre["name"]}"
     end
   end
 
@@ -79,6 +79,7 @@ class App
     @genres.push(genre)
     @books.push(book)
     puts 'Book added successfully'
+    save
   end
 
   def create_music_album
@@ -103,6 +104,7 @@ class App
     @genres.push(genre)
     @music_albums.push(music_album)
     puts 'Album added successfully'
+    save
   end
 
   def create_game
@@ -129,6 +131,7 @@ class App
     @genres.push(genre)
     @games.push(game)
     puts 'Game added successfully'
+    save
   end
   # rubocop:enable Metrics/MethodLength
 

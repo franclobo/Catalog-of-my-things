@@ -13,5 +13,20 @@
     "json_class": "Author",
     "first_name": "Finisterra",
     "last_name": null
+  },
+  {
+    "json_class": "Author",
+    "first_name": "Sun",
+    "last_name": "Tzu"
+  },
+  {
+    "json_class": "Author",
+    "first_name": "JK",
+    "last_name": "Rowling"
+  },
+  {
+    "json_class": "Author",
+    "first_name": "C.S.",
+    "last_name": "Lewis"
   }
 ]

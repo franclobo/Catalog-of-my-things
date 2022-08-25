@@ -16,5 +16,23 @@
     "id": 62,
     "title": "Mago de Oz",
     "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 19,
+    "title": "The Art of War",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 66,
+    "title": "Harry Potter",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 62,
+    "title": "The MAgicians Nephew",
+    "color": "Black"
   }
 ]
