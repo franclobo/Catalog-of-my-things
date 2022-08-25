@@ -26,31 +26,31 @@ class App
 
   def list_labels
     @labels.each do |label|
-      puts "[Label] : #{label.title} (#{label.color})"
+      puts "[Label]: #{label.title} (#{label.color})"
     end
   end
 
   def list_music_albums
     @music_albums.each do |album|
-      puts "Album Name : #{album.label.title})"
+      puts "Album Name: #{album.label.title})"
     end
   end
 
   def list_authors
     @authors.each do |author|
-      puts "[Author] : #{author.first_name} #{author.last_name}"
+      puts "[Author]: #{author.first_name} #{author.last_name}"
     end
   end
 
   def list_games
     @games.each do |game|
-      puts "Title: #{game.label.title}  Multiplayer: #{game.multiplayer} Genre: #{game.genre.name}"
+      puts "Game name: #{game.label.title} Genre: #{game.genre.name}"
     end
   end
 
   def list_genres
     @genres.each do |genre|
-      puts "[Genre] : #{genre.name}"
+      puts "[Genre]: #{genre.name}"
     end
   end
 
@@ -102,5 +102,31 @@ class App
     @genres.push(genre)
     @music_albums.push(music_album)
     puts 'Album added successfully'
+  end
+
+  def create_game
+    puts 'Game name:'
+    label = Label.new(gets.chomp)
+    puts 'It`s multiplayer [Y/N]:'
+    multiplayer = gets.chomp
+    puts 'Last time that you played [Year]:'
+    last_played_at = gets.chomp
+    puts 'Year of publish:'
+    publish_date = gets.chomp
+    puts 'Author`s full name [First and Last name]:'
+    author_value = gets.chomp
+    arr = author_value.split
+    author = Author.new(arr[0], arr[1])
+    puts 'Genre (e.g. Shooter, MOBA):'
+    genre = Genre.new(gets.chomp)
+    game = Game.new(multiplayer, last_played_at, publish_date, label, author, genre)
+    author.add_item(game)
+    label.add_item(game)
+    genre.add_item(game)
+    @authors.push(author)
+    @labels.push(label)
+    @genres.push(genre)
+    @games.push(game)
+    puts 'Game added successfully'
   end
 end

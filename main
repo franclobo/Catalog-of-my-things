@@ -92,6 +92,7 @@ class Main
       app.create_music_album
       options_add
     when '3'
+      app.create_game
       options_add
     when '0'
       options
