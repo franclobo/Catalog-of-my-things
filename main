@@ -62,8 +62,8 @@ class Main
     when '5'
       app.list_genres
       options_list
-      app.list_authors
     when '6'
+      app.list_authors
       options_list
     when '0'
       options
@@ -86,6 +86,7 @@ class Main
     selection = gets.chomp
     case selection
     when '1'
+      app.create_book
       options_add
     when '2'
       options_add

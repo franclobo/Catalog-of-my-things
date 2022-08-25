@@ -11,8 +11,8 @@ class Genre
   end
 
   def add_item(item)
+    items << item unless items.include? item
     item.genre = self
-    @items.push(item)
   end
 
   def to_json(*args)

@@ -19,14 +19,14 @@ class App
   end
 
   def list_books
-    books.each do |book|
-      puts "Title: #{book.label.title}  Author: #{book.author} Genre: #{book.genre}"
+    @books.each do |book|
+      puts "Book Title: #{book.label.title}"
     end
   end
 
   def list_labels
     @labels.each do |label|
-      puts "[Label] : #{label.title}"
+      puts "[Label] : #{label.title} (#{label.color})"
     end
   end
 
@@ -38,7 +38,7 @@ class App
 
   def list_authors
     @authors.each do |author|
-      puts "[Author] : #{author.first_name}"
+      puts "[Author] : #{author.first_name} #{author.last_name}"
     end
   end
 
@@ -52,5 +52,31 @@ class App
     @genres.each do |genre|
       puts "[Genre] : #{genre.name}"
     end
+  end
+
+  def create_book
+    puts 'Book name:'
+    label = Label.new(gets.chomp)
+    puts 'Publisher:'
+    publisher = gets.chomp
+    puts 'Cover state [good/bad]:'
+    cover_state = gets.chomp
+    puts 'Year of publish:'
+    publish_date = gets.chomp
+    puts 'Author`s full name [first and last name]:'
+    author_value = gets.chomp
+    arr = author_value.split
+    author = Author.new(arr[0], arr[1])
+    puts 'Genre (e.g. Comedy, Thriller):'
+    genre = Genre.new(gets.chomp)
+    book = Book.new(publisher, cover_state, publish_date, label, author, genre)
+    author.add_item(book)
+    label.add_item(book)
+    genre.add_item(book)
+    @authors.push(author)
+    @labels.push(label)
+    @genres.push(genre)
+    @books.push(book)
+    puts 'Book added successfully'
   end
 end
