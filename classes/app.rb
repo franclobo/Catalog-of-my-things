@@ -9,6 +9,7 @@ require_relative './genre'
 class App
   attr_accessor :books, :music_albums, :games, :labels, :genres, :authors
 
+  # rubocop:disable Layout/LineLength
   def initialize
     @books = File.exist?('./classes/JSON/books.json') ? JSON.parse(File.read('./classes/JSON/books.json')) : []
     @music_albums = File.exist?('./classes/JSON/music_albums.json') ? JSON.parse(File.read('./classes/JSON/music_albums.json')) : []
@@ -18,39 +19,40 @@ class App
     @authors = File.exist?('./classes/JSON/authors.json') ? JSON.parse(File.read('./classes/JSON/authors.json')) : []
   end
 
+  # rubocop:enable Layout/LineLength
   def list_books
     @books.each do |book|
-      puts "Book Title: #{book["title"]}"
+      puts "Book Title: #{book['title']}"
     end
   end
 
   def list_labels
     @labels.each do |label|
-      puts "[Label]: #{label["title"]} (#{label["color"]})"
+      puts "[Label]: #{label['title']} (#{label['color']})"
     end
   end
 
   def list_music_albums
     @music_albums.each do |album|
-      puts "Album Name: #{album["label"]["title"]}"
+      puts "Album Name: #{album['label']['title']}"
     end
   end
 
   def list_authors
     @authors.each do |author|
-      puts "[Author]: #{author["first_name"]} #{author["last_name"]}"
+      puts "[Author]: #{author['first_name']} #{author['last_name']}"
     end
   end
 
   def list_games
     @games.each do |game|
-      puts "Game name: #{game["title"]} Genre: #{game["genre"]["name"]}"
+      puts "Game name: #{game['title']} Genre: #{game['genre']['name']}"
     end
   end
 
   def list_genres
     @genres.each do |genre|
-      puts "[Genre]: #{genre["name"]}"
+      puts "[Genre]: #{genre['name']}"
     end
   end
 
