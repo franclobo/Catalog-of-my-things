@@ -3,8 +3,8 @@ require_relative './item'
 class MussicAlbum < Item
   attr_accessor :on_spotify
 
-  def initialize(on_spotify, publish_date, _id = Ramdon.rand(1..100))
-    super(publish_date)
+  def initialize(on_spotify, publish_date, label = nil, author = nil, genre = nil)
+    super(publish_date, label, author, genre)
     @on_spotify = on_spotify
   end
 

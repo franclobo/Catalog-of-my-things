@@ -89,6 +89,7 @@ class Main
       app.create_book
       options_add
     when '2'
+      app.create_music_album
       options_add
     when '3'
       options_add

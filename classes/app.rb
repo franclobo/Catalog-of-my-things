@@ -32,7 +32,7 @@ class App
 
   def list_music_albums
     @music_albums.each do |album|
-      puts "[Title] : #{album.label.title} - [Author] : #{album.author.first_name} ([Date] : #{album.publish_date})"
+      puts "Album Name : #{album.label.title})"
     end
   end
 
@@ -78,5 +78,29 @@ class App
     @genres.push(genre)
     @books.push(book)
     puts 'Book added successfully'
+  end
+
+  def create_music_album
+    puts 'Album name:'
+    label = Label.new(gets.chomp)
+    puts 'The albun is on spotify [Y/N]:'
+    on_spotify = gets.chomp
+    puts 'Year of publish:'
+    publish_date = gets.chomp
+    puts 'Author`s full name [first and last name]:'
+    author_value = gets.chomp
+    arr = author_value.split
+    author = Author.new(arr[0], arr[1])
+    puts 'Genre (e.g. Pop, Rock):'
+    genre = Genre.new(gets.chomp)
+    music_album = MussicAlbum.new(on_spotify, publish_date, label, author, genre)
+    author.add_item(music_album)
+    label.add_item(music_album)
+    genre.add_item(music_album)
+    @authors.push(author)
+    @labels.push(label)
+    @genres.push(genre)
+    @music_albums.push(music_album)
+    puts 'Album added successfully'
   end
 end
