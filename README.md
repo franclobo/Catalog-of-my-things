@@ -21,6 +21,9 @@ We created an app will allows you to:
 - [Clone repository](git@github.com:franclobo/Catalog-of-my-things.git).
 - Enter `ruby main` in terminal.
 
+## Live demo
+- [Video Demo](https://drive.google.com/file/d/1UwLgeuIs6cTuV9qAvLFLlT7fm3P9vVG7/view?usp=sharing)
+
 ## Authors
 
 ## 👤 Francisco Borja
