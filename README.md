@@ -22,7 +22,7 @@ We created an app will allows you to:
 - Enter `ruby main` in terminal.
 
 ## Live demo
-- [Video Demo](https://drive.google.com/file/d/1UwLgeuIs6cTuV9qAvLFLlT7fm3P9vVG7/view?usp=sharing)
+- [Video Demo](https://drive.google.com/file/d/1ZZGcgg7LHNh02Z1MvpfAYAuRcHa6p0fs/view?usp=sharing)
 
 ## Authors
 
