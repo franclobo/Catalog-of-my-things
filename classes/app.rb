@@ -54,6 +54,7 @@ class App
     end
   end
 
+  # rubocop:disable Metrics/MethodLength
   def create_book
     puts 'Book name:'
     label = Label.new(gets.chomp)
@@ -129,4 +130,5 @@ class App
     @games.push(game)
     puts 'Game added successfully'
   end
+  # rubocop:enable Metrics/MethodLength
 end
