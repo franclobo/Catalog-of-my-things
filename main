@@ -25,6 +25,7 @@ class Main
     when '2'
       options_add
     when '0'
+      app.save
       abort
     else
       puts 'Invalid selection'

@@ -32,7 +32,7 @@ class App
 
   def list_music_albums
     @music_albums.each do |album|
-      puts "Album Name: #{album.label.title})"
+      puts "Album Name: #{album.label.title}"
     end
   end
 
@@ -131,4 +131,13 @@ class App
     puts 'Game added successfully'
   end
   # rubocop:enable Metrics/MethodLength
+
+  def save
+    File.write('./classes/JSON/books.json', JSON.pretty_generate(@books))
+    File.write('./classes/JSON/music_albums.json', JSON.pretty_generate(@music_albums))
+    File.write('./classes/JSON/games.json', JSON.pretty_generate(@games))
+    File.write('./classes/JSON/labels.json', JSON.pretty_generate(@labels))
+    File.write('./classes/JSON/genres.json', JSON.pretty_generate(@genres))
+    File.write('./classes/JSON/authors.json', JSON.pretty_generate(@authors))
+  end
 end
