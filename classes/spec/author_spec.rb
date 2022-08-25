@@ -1,9 +1,11 @@
 require_relative '../author'
+require_relative '../item'
 
 describe Author do
   context 'when initialized' do
     before(:all) do
       @author = Author.new('John', 'Doe')
+      @item = Item.new(2020)
     end
 
     it 'should have an id' do
@@ -17,11 +19,7 @@ describe Author do
     end
 
     it 'should add an item' do
-      item = double('Item')
-      allow(item).to receive(:author)
-      expect(item).to receive(:author).with(@author)
-      @author.add_item(item)
-      expect(@author.items).to eq [item]
+      expect(@author.add_item(@item)).not_to be_nil
     end
   end
 end
