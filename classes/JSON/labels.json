@@ -32,7 +32,13 @@
   {
     "json_class": "Label",
     "id": 62,
-    "title": "The MAgicians Nephew",
+    "title": "The Magicians Nephew",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 74,
+    "title": "Valorant",
     "color": "Black"
   }
 ]

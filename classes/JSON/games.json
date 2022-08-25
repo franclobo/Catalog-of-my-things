@@ -16,5 +16,23 @@
       "first_name": "Texaco",
       "last_name": "Tumoko"
     }
+  },
+  {
+    "json_class": "Game",
+    "id": 457,
+    "publish_date": "2020",
+    "last_played": "2022",
+    "multiplayer": "y",
+    "genre": {
+      "json_class": "Genre",
+      "id": 3,
+      "name": "Shooter"
+    },
+    "title": "Valorant",
+    "author": {
+      "json_class": "Author",
+      "first_name": "Riot",
+      "last_name": "Games"
+    }
   }
 ]

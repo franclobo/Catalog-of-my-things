@@ -13,7 +13,7 @@ class Main
     puts 'Please choose an option:'
     puts '1 - List all'
     puts '2 - Add Item'
-    puts '0 - Exit'
+    puts '0 - Save and Exit'
     user_selection
   end
   
@@ -25,7 +25,6 @@ class Main
     when '2'
       options_add
     when '0'
-      app.save
       abort
     else
       puts 'Invalid selection'
@@ -41,7 +40,7 @@ class Main
     puts '4 - List all labels'
     puts '5 - List all genres'
     puts '6 - List all authors'
-    puts '0 - Back'
+    puts '0 - Save and Exit'
     list_select
   end
   
@@ -67,7 +66,7 @@ class Main
       app.list_authors
       options_list
     when '0'
-      options
+      abort
     else
       puts 'Invalid selection'
       options_list
@@ -79,7 +78,7 @@ class Main
     puts '1 - Add a book'
     puts '2 - Add a music album'
     puts '3 - Add a game'
-    puts '0 - Back'
+    puts '0 - Save and Exit'
     add_select
   end
 
@@ -96,7 +95,7 @@ class Main
       app.create_game
       options_add
     when '0'
-      options
+      abort
     else
       puts 'Invalid selection'
       options_add

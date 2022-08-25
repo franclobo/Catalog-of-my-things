@@ -28,5 +28,10 @@
     "json_class": "Author",
     "first_name": "C.S.",
     "last_name": "Lewis"
+  },
+  {
+    "json_class": "Author",
+    "first_name": "Riot",
+    "last_name": "Games"
   }
 ]

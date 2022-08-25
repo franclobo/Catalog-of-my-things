@@ -28,5 +28,10 @@
     "json_class": "Genre",
     "id": 50,
     "name": "Children's fantasy"
+  },
+  {
+    "json_class": "Genre",
+    "id": 3,
+    "name": "Shooter"
   }
 ]
