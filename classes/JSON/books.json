@@ -1,0 +1,20 @@
+[
+  {
+    "json_class": "Book",
+    "id": 401,
+    "title": "Lord of the Rings",
+    "publisher": "Edimca",
+    "cover_state": "good",
+    "publish_date": "2018",
+    "author": {
+      "json_class": "Author",
+      "first_name": "JRR",
+      "last_name": "Tolkien"
+    },
+    "genre": {
+      "json_class": "Genre",
+      "id": 45,
+      "name": "Thriller"
+    }
+  }
+]

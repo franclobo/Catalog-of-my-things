@@ -3,8 +3,9 @@ require_relative './item'
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
 
-  def initialize(multiplayer, last_played_at, publish_date)
-    super(publish_date)
+  def initialize(multiplayer, last_played_at, publish_date, label = nil, author = nil, genre = nil
+)
+    super(publish_date, label, author, genre)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
   end
@@ -16,10 +17,9 @@ class Game < Item
       'publish_date' => @publish_date,
       'last_played' => @last_played_at,
       'multiplayer' => @multiplayer,
-      'archived' => @archived,
-      'genre' => @genre&.id,
-      'label' => label&.id,
-      'author' => author&.id
+      'genre' => @genre,
+      'title' => @label.title,
+      'author' => @author
     }.to_json(*args)
   end
 
@@ -31,11 +31,9 @@ class Game < Item
       object['multiplayer'],
       object['archived'],
       object['genre'],
-      object['label'],
+      Label.new(object['title']),
       object['author']
     )
-  end
-end
   end
 
   private

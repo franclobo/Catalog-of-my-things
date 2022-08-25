@@ -1,0 +1,20 @@
+[
+  {
+    "json_class": "Game",
+    "id": 863,
+    "publish_date": "1990",
+    "last_played": "2000",
+    "multiplayer": "Y",
+    "genre": {
+      "json_class": "Genre",
+      "id": 69,
+      "name": "Race"
+    },
+    "title": "Mario Kart",
+    "author": {
+      "json_class": "Author",
+      "first_name": "Texaco",
+      "last_name": "Tumoko"
+    }
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "json_class": "Genre",
+    "id": 69,
+    "name": "Race"
+  },
+  {
+    "json_class": "Genre",
+    "id": 45,
+    "name": "Thriller"
+  },
+  {
+    "json_class": "Genre",
+    "id": 99,
+    "name": "Rock"
+  }
+]

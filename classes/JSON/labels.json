@@ -1,0 +1,20 @@
+[
+  {
+    "json_class": "Label",
+    "id": 88,
+    "title": "Mario Kart",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 82,
+    "title": "Lord of the Rings",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 62,
+    "title": "Mago de Oz",
+    "color": "Black"
+  }
+]

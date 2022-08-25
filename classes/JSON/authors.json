@@ -1,0 +1,17 @@
+[
+  {
+    "json_class": "Author",
+    "first_name": "Texaco",
+    "last_name": "Tumoko"
+  },
+  {
+    "json_class": "Author",
+    "first_name": "JRR",
+    "last_name": "Tolkien"
+  },
+  {
+    "json_class": "Author",
+    "first_name": "Finisterra",
+    "last_name": null
+  }
+]
