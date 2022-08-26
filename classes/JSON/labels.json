@@ -1,0 +1,50 @@
+[
+  {
+    "json_class": "Label",
+    "id": 88,
+    "title": "Mario Kart",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 82,
+    "title": "Lord of the Rings",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 62,
+    "title": "Mago de Oz",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 19,
+    "title": "The Art of War",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 66,
+    "title": "Harry Potter",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 62,
+    "title": "The Magicians Nephew",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 74,
+    "title": "Valorant",
+    "color": "Black"
+  },
+  {
+    "json_class": "Label",
+    "id": 13,
+    "title": "Mario Bros",
+    "color": "Black"
+  }
+]

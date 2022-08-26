@@ -1,0 +1,42 @@
+[
+  {
+    "json_class": "Genre",
+    "id": 69,
+    "name": "Race"
+  },
+  {
+    "json_class": "Genre",
+    "id": 45,
+    "name": "Thriller"
+  },
+  {
+    "json_class": "Genre",
+    "id": 99,
+    "name": "Rock"
+  },
+  {
+    "json_class": "Genre",
+    "id": 68,
+    "name": "Estrategic"
+  },
+  {
+    "json_class": "Genre",
+    "id": 52,
+    "name": "Thriller"
+  },
+  {
+    "json_class": "Genre",
+    "id": 50,
+    "name": "Children's fantasy"
+  },
+  {
+    "json_class": "Genre",
+    "id": 3,
+    "name": "Shooter"
+  },
+  {
+    "json_class": "Genre",
+    "id": 65,
+    "name": "Arcade"
+  }
+]

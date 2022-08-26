@@ -1,0 +1,74 @@
+[
+  {
+    "json_class": "Book",
+    "id": 401,
+    "title": "Lord of the Rings",
+    "publisher": "Edimca",
+    "cover_state": "good",
+    "publish_date": "2018",
+    "author": {
+      "json_class": "Author",
+      "first_name": "JRR",
+      "last_name": "Tolkien"
+    },
+    "genre": {
+      "json_class": "Genre",
+      "id": 45,
+      "name": "Thriller"
+    }
+  },
+  {
+    "json_class": "Book",
+    "id": 478,
+    "title": "The Art of War",
+    "publisher": "Eskeletra",
+    "cover_state": "bad",
+    "publish_date": "0000",
+    "author": {
+      "json_class": "Author",
+      "first_name": "Sun",
+      "last_name": "Tzu"
+    },
+    "genre": {
+      "json_class": "Genre",
+      "id": 68,
+      "name": "Estrategic"
+    }
+  },
+  {
+    "json_class": "Book",
+    "id": 222,
+    "title": "Harry Potter",
+    "publisher": "Magic",
+    "cover_state": "good",
+    "publish_date": "2000",
+    "author": {
+      "json_class": "Author",
+      "first_name": "JK",
+      "last_name": "Rowling"
+    },
+    "genre": {
+      "json_class": "Genre",
+      "id": 52,
+      "name": "Thriller"
+    }
+  },
+  {
+    "json_class": "Book",
+    "id": 223,
+    "title": "The Magicians Nephew",
+    "publisher": "The Bodley Head",
+    "cover_state": "good",
+    "publish_date": "1955",
+    "author": {
+      "json_class": "Author",
+      "first_name": "C.S.",
+      "last_name": "Lewis"
+    },
+    "genre": {
+      "json_class": "Genre",
+      "id": 50,
+      "name": "Children's fantasy"
+    }
+  }
+]
