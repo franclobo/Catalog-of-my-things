@@ -23,13 +23,13 @@ We created an app will allows you to:
 
 ## Live demo
 - [Video Demo](https://drive.google.com/file/d/1ZZGcgg7LHNh02Z1MvpfAYAuRcHa6p0fs/view?usp=sharing)
-![image](https://user-images.githubusercontent.com/58642949/203120981-cc8f5fd1-326f-4028-a883-bb9a11efb7fa.png)
-![image](https://user-images.githubusercontent.com/58642949/203121090-e5d06be5-108f-46b3-9ac7-14e0df2f5e28.png)
-![image](https://user-images.githubusercontent.com/58642949/203121726-9ccf70a7-e060-458a-975f-48c1e8ef9161.png)
-![image](https://user-images.githubusercontent.com/58642949/203121961-0fb8988f-8335-495a-a5a9-68ae21e39638.png)
-![image](https://user-images.githubusercontent.com/58642949/203122272-779f3379-f3a4-4338-a731-33d82f57d2dd.png)
-![image](https://user-images.githubusercontent.com/58642949/203122597-6deb2474-5e18-4bfb-93b9-5a46c5f35527.png)
-![image](https://user-images.githubusercontent.com/58642949/203122764-989a38fe-ad26-4f29-908e-73c3bd4067b8.png)
+- ![image](https://user-images.githubusercontent.com/58642949/203120981-cc8f5fd1-326f-4028-a883-bb9a11efb7fa.png)
+- ![image](https://user-images.githubusercontent.com/58642949/203121090-e5d06be5-108f-46b3-9ac7-14e0df2f5e28.png)
+- ![image](https://user-images.githubusercontent.com/58642949/203121726-9ccf70a7-e060-458a-975f-48c1e8ef9161.png)
+- ![image](https://user-images.githubusercontent.com/58642949/203121961-0fb8988f-8335-495a-a5a9-68ae21e39638.png)
+- ![image](https://user-images.githubusercontent.com/58642949/203122272-779f3379-f3a4-4338-a731-33d82f57d2dd.png)
+- ![image](https://user-images.githubusercontent.com/58642949/203122597-6deb2474-5e18-4bfb-93b9-5a46c5f35527.png)
+- ![image](https://user-images.githubusercontent.com/58642949/203122764-989a38fe-ad26-4f29-908e-73c3bd4067b8.png)
 
 
 ## Authors
